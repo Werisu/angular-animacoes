@@ -12,6 +12,8 @@ import {
   highlightedStateTrigger,
   showStateTrigger,
   formButtonTrigger,
+  flyInOutTrigger,
+  shakeTrigger,
 } from '../animations';
 
 @Component({
@@ -26,6 +28,8 @@ import {
     checkButtonTrigger,
     filterTrigger,
     formButtonTrigger,
+    flyInOutTrigger,
+    shakeTrigger
   ],
 })
 export class ListaTarefasComponent implements OnInit {

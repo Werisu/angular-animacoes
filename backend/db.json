@@ -41,6 +41,13 @@
       "statusFinalizado": true,
       "categoria": "Casa",
       "prioridade": "Alta"
+    },
+    {
+      "id": 8,
+      "descricao": "Faxina na casa",
+      "statusFinalizado": true,
+      "categoria": "Casa",
+      "prioridade": "Alta"
     }
   ]
 }
