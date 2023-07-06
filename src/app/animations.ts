@@ -240,3 +240,32 @@ export const filterTrigger = trigger('filterAnimation', [
     animate('400ms cubic-bezier(.12,.96,.92,.22)', style({ opacity: 0, width: 0 }))
   ]),
 ]);
+
+export const formButtonTrigger = trigger('formButton', [
+  transition('invalid => valid', [
+    group([
+      animate(200, style({
+        backgroundColor: '#63B77C',
+      })),
+      animate(100, style({
+        transform: 'scale(1.1)',
+      })),
+    ]),
+    animate(200, style({
+      transform: 'scale(1)',
+    }))
+  ]),
+  transition('valid => invalid', [
+    group([
+      animate(200, style({
+        backgroundColor: '#6C757D',
+      })),
+      animate(100, style({
+        transform: 'scale(1.1)',
+      })),
+    ]),
+    animate(200, style({
+      transform: 'scale(1)',
+    }))
+  ]),
+]);
