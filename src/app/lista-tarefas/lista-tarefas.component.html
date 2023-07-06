@@ -101,8 +101,8 @@
         <p class="status-tarefa">
           <button
             [ngClass]="(tarefa.statusFinalizado == true) ? 'icone-checked' : 'icone-unchecked'"
-            (click)="finalizarTarefa(tarefa.id);"
-            [@bounceOnEnter2]="(tarefa.id === id ? 'checked': 'unchecked')">
+            (click)="finalizarTarefa(tarefa);"
+            [@bounceOnEnter2]="tarefa.id === id && estadoBotao">
           </button>
         </p>
       </div>
@@ -119,7 +119,7 @@
             <img src="assets/icones/icone-editar.png" alt="Ícone de editar">
           </button>
           <button
-            (click)="excluirTarefa(tarefa.id)"
+            (click)="excluirTarefa(tarefa)"
             class="botao-deletar">
             <img src="assets/icones/icone-excluir.png" alt="Ícone de excluir">
           </button>

@@ -9,25 +9,16 @@ const routes: Routes = [
     path: '',
     redirectTo: 'listaTarefas',
     pathMatch: 'full',
-    data: {
-      reuseComponent: true
-    }
   },
   {
     path: 'listaTarefas',
-    component: ListaTarefasComponent,
-    data: {
-      reuseComponent: true
-    }
+    component: ListaTarefasComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
-  exports: [RouterModule],
-  providers: [
-    {provide: RouteReuseStrategy, useClass: AppRouteReuseStrategy}
-  ],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
  })
 export class AppRoutingModule { }
 
