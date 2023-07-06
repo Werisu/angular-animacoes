@@ -6,6 +6,7 @@ import {
   group,
   keyframes,
   query,
+  stagger,
   state,
   style,
   transition,
@@ -320,5 +321,30 @@ export const shakeTrigger = trigger('shake', [
         style({ transform: 'translateX(0)' }),
       ])),
     ], { optional: true }),
+  ]),
+]);
+
+export const listStateTrigger = trigger('listState', [
+  transition('* => *', [
+    query(':enter', [
+      style({
+        opacity: 0,
+        transform: 'translateX(-100%)',
+      }),
+      stagger(200, [
+        animate('300ms ease-out', keyframes([
+          style({
+            opacity: 1,
+            transform: 'translateX(15%)',
+            offset: 0.4,
+          }),
+          style({
+            opacity: 1,
+            transform: 'translateX(0)',
+            offset: 1,
+          }),
+        ])),
+      ]),
+    ], { optional: true })
   ]),
 ]);
