@@ -8,7 +8,7 @@ import { Tarefa } from '../interface/tarefa';
   providedIn: 'root',
 })
 export class TarefaService {
-  private readonly API = 'http://localhost:3000/tarefas';
+  private readonly API = 'https://memorando-api.onrender.com/tarefas';
   private tarefasSubject = new BehaviorSubject<Tarefa[]>([]);
   tarefas$: Observable<Tarefa[]> = this.tarefasSubject.asObservable();
 
