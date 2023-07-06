@@ -20,7 +20,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
-  styleUrls: ['./lista-tarefas.component.css'],
+  styleUrls: ['./lista-tarefas.component.css', './lista-tarefas-continue.component.css'],
   animations: [
     highlightedStateTrigger,
     showStateTrigger,
